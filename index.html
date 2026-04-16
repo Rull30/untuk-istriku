@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selamat Ulang Tahun, Vira!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          boxShadow: {
+            soft: "0 25px 60px rgba(15, 8, 44, 0.45)"
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    .stars,
+    .stars::before,
+    .stars::after {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background-image:
+        radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.9), transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(255, 255, 255, 0.6), transparent),
+        radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.8), transparent),
+        radial-gradient(1px 1px at 140px 110px, rgba(255, 255, 255, 0.5), transparent);
+      background-size: 180px 180px;
+      animation: drift 90s linear infinite;
+      pointer-events: none;
+    }
+
+    .stars::before {
+      transform: scale(1.25);
+      opacity: 0.6;
+      animation-duration: 120s;
+    }
+
+    .stars::after {
+      transform: scale(1.5);
+      opacity: 0.35;
+      animation-duration: 150s;
+    }
+
+    .heart {
+      position: absolute;
+      pointer-events: none;
+      z-index: 60;
+      filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
+      transform-origin: center;
+    }
+
+    @keyframes drift {
+      from { transform: translateY(0); }
+      to { transform: translateY(-180px); }
+    }
+
+    .floaty {
+      will-change: transform;
+    }
+  </style>
+</head>
+<body class="relative min-h-screen overflow-x-hidden bg-[#e8f3ff] font-['Poppins'] text-[#123053] selection:bg-sky-200/70">
+  <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,#cde5ff_0%,#e8f3ff_45%,#f3f8ff_100%)]"></div>
+  <div id="blobLeft" class="pointer-events-none absolute -left-24 top-0 h-56 w-56 rounded-full bg-sky-300/55 blur-3xl sm:h-72 sm:w-72"></div>
+  <div id="blobRight" class="pointer-events-none absolute -right-24 top-1/3 h-64 w-64 rounded-full bg-blue-200/70 blur-3xl sm:h-80 sm:w-80"></div>
+  <div class="stars"></div>
+
+  <main class="relative z-20 mx-auto w-full max-w-full space-y-4 px-4 py-4 sm:max-w-6xl sm:space-y-6 sm:px-6 sm:py-10">
+    <section id="heroSection" class="relative overflow-hidden rounded-none border-0 bg-white/85 rounded-xl p-4 shadow-soft backdrop-blur-xl sm:mt-5 sm:rounded-3xl sm:border sm:border-white/60 sm:bg-white/75 sm:p-8">
+      <div class="pointer-events-none absolute -top-4 left-2 rotate-[-12deg] text-2xl floaty">🎀</div>
+      <div class="pointer-events-none absolute right-3 top-3 text-xl floaty">✨</div>
+      <div class="pointer-events-none absolute bottom-3 left-4 text-2xl floaty">🧸</div>
+      <div class="pointer-events-none absolute bottom-4 right-6 text-xl floaty">🌷</div>
+
+      <div id="badgeRow" class="mb-5 flex flex-wrap items-center gap-2 text-xs font-semibold">
+        <span class="rounded-full border border-sky-300/60 bg-sky-100/80 px-4 py-2 tracking-wide text-sky-800">Birthday Website</span>
+        <span class="rounded-full border border-blue-300/60 bg-blue-100/80 px-4 py-2 tracking-wide text-blue-800">Made with Love</span>
+      </div>
+
+      <h1 id="heroTitle" class="text-2xl font-black leading-tight text-[#10345c] sm:text-5xl">
+        Selamat Ulang Tahun Sayangkuu,
+        <span class="block bg-gradient-to-r from-sky-500 via-blue-500 to-indigo-500 bg-clip-text text-transparent">
+          Vira Khoirunisa Azzahara
+        </span>
+      </h1>
+      <p id="heroSubtitle" class="mt-4 max-w-3xl text-sm leading-7 text-sky-900/80 sm:text-base">
+        Hari ini tentang senyummu, bahagiamu, dan semua hal indah yang kamu bawa ke hidupku.
+        Semoga setiap langkahmu dipenuhi keberkahan, cinta, dan impian yang tercapai.
+      </p>
+
+      <div id="miniStats" class="mt-6 grid grid-cols-1 gap-3 min-[420px]:grid-cols-2 md:grid-cols-4">
+        <article class="rounded-2xl border border-sky-200/80 bg-sky-50/80 p-4">
+          <p class="text-xs font-semibold uppercase tracking-wider text-sky-600">Status Hari Ini</p>
+          <p class="mt-1 text-lg font-bold text-sky-900">Princess Day</p>
+        </article>
+        <article class="rounded-2xl border border-sky-200/80 bg-sky-50/80 p-4">
+          <p class="text-xs font-semibold uppercase tracking-wider text-sky-600">Mode</p>
+          <p class="mt-1 text-lg font-bold text-sky-900">Extra Happy</p>
+        </article>
+        <article class="rounded-2xl border border-sky-200/80 bg-sky-50/80 p-4">
+          <p class="text-xs font-semibold uppercase tracking-wider text-sky-600">Wish</p>
+          <p class="mt-1 text-lg font-bold text-sky-900">Selalu Sehat</p>
+        </article>
+        <article class="rounded-2xl border border-sky-200/80 bg-sky-50/80 p-4">
+          <p class="text-xs font-semibold uppercase tracking-wider text-sky-600">Vibe</p>
+          <p class="mt-1 text-lg font-bold text-sky-900">Romantis</p>
+        </article>
+      </div>
+
+      <div id="actionRow" class="mt-6 flex flex-wrap gap-3">
+        <button class="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 px-5 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:shadow-lg sm:w-auto" id="loveBtn" type="button">
+          <span>Peluk virtual</span><span class="transition group-hover:scale-110">💖</span>
+        </button>
+        <button class="inline-flex w-full items-center justify-center gap-2 rounded-full border border-sky-300/70 bg-sky-50/80 px-5 py-3 text-sm font-bold text-sky-900 transition hover:-translate-y-0.5 hover:bg-sky-100 sm:w-auto" id="memoryBtn" type="button">
+          <span>Pesan manis hari ini</span><span>✨</span>
+        </button>
+      </div>
+      <p id="note" class="mt-4 min-h-6 rounded-xl border border-sky-200/70 bg-white/90 px-3 py-2 text-sm font-semibold text-sky-900 sm:text-base"></p>
+    </section>
+
+    <section id="timelineSection" class="grid gap-4 rounded-2xl border border-white/55 bg-white/80 p-4 backdrop-blur-xl sm:rounded-3xl sm:p-8">
+      <h2 class="text-xl font-bold text-[#0f325b] sm:text-2xl">Timeline Cerita Kita</h2>
+      <div class="grid gap-3 md:grid-cols-2">
+        <article class="timeline-card rounded-2xl border border-sky-200/70 bg-sky-50 p-4">
+          <p class="text-xs font-semibold text-sky-600">Awal Bertemu</p>
+          <p class="mt-1 text-sm text-sky-900/90">Hari itu biasa saja, sampai akhirnya kamu hadir dan semuanya berubah jadi lebih berwarna.</p>
+        </article>
+        <article class="timeline-card rounded-2xl border border-sky-200/70 bg-sky-50 p-4">
+          <p class="text-xs font-semibold text-sky-600">Mulai Dekat</p>
+          <p class="mt-1 text-sm text-sky-900/90">Chat sederhana berubah jadi cerita panjang yang selalu kutunggu setiap hari.</p>
+        </article>
+        <article class="timeline-card rounded-2xl border border-sky-200/70 bg-sky-50 p-4">
+          <p class="text-xs font-semibold text-sky-600">Banyak Kenangan</p>
+          <p class="mt-1 text-sm text-sky-900/90">Dari tawa receh sampai momen serius, semuanya tetap jadi bagian favoritku.</p>
+        </article>
+        <article class="timeline-card rounded-2xl border border-sky-200/70 bg-sky-50 p-4">
+          <p class="text-xs font-semibold text-sky-600">Hari Ulang Tahunmu</p>
+          <p class="mt-1 text-sm text-sky-900/90">Hari spesial buat orang paling spesial: kamu, Vira.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallerySection" class="rounded-2xl border border-white/55 bg-white/80 p-4 backdrop-blur-xl sm:rounded-3xl sm:p-8">
+      <h2 class="text-xl font-bold text-[#0f325b] sm:text-2xl">Galeri Kenangan Kita</h2>
+      <div class="mt-4 grid grid-cols-2 gap-3 min-[420px]:grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
+        <figure class="gallery-item rounded-2xl border border-sky-200/70 bg-white p-2 shadow-md">
+          <img class="gallery-image h-44 w-full rounded-xl object-cover sm:h-36" src="assets/gallery/1.jpg" alt="Momen 1" />
+        </figure>
+        <figure class="gallery-item rounded-2xl border border-sky-200/70 bg-white p-2 shadow-md">
+          <img class="gallery-image h-44 w-full rounded-xl object-cover sm:h-36" src="assets/gallery/2.jpg" alt="Momen 2" />
+        </figure>
+        <figure class="gallery-item rounded-2xl border border-sky-200/70 bg-white p-2 shadow-md">
+          <img class="gallery-image h-44 w-full rounded-xl object-cover sm:h-36" src="assets/gallery/3.jpg" alt="Momen 3" />
+        </figure>
+        <figure class="gallery-item rounded-2xl border border-sky-200/70 bg-white p-2 shadow-md">
+          <img class="gallery-image h-44 w-full rounded-xl object-cover sm:h-36" src="assets/gallery/4.jpg" alt="Momen 4" />
+        </figure>
+        <figure class="gallery-item rounded-2xl border border-sky-200/70 bg-white p-2 shadow-md">
+          <img class="gallery-image h-44 w-full rounded-xl object-cover sm:h-36" src="assets/gallery/5.jpg" alt="Momen 5" />
+        </figure>
+        <figure class="gallery-item rounded-2xl border border-sky-200/70 bg-white p-2 shadow-md">
+          <img class="gallery-image h-44 w-full rounded-xl object-cover sm:h-36" src="assets/gallery/6.jpg" alt="Momen 6" />
+        </figure>
+        <figure class="gallery-item rounded-2xl border border-sky-200/70 bg-white p-2 shadow-md">
+          <img class="gallery-image h-44 w-full rounded-xl object-cover sm:h-36" src="assets/gallery/7.jpg" alt="Momen 7" />
+        </figure>
+        <figure class="gallery-item rounded-2xl border border-sky-200/70 bg-white p-2 shadow-md">
+          <img class="gallery-image h-44 w-full rounded-xl object-cover sm:h-36" src="assets/gallery/8.jpg" alt="Momen 8" />
+        </figure>
+      </div>
+    </section>
+
+    <section id="reasonSection" class="grid gap-4 rounded-2xl border border-white/55 bg-white/80 p-4 backdrop-blur-xl sm:rounded-3xl sm:p-8 md:grid-cols-2">
+      <article class="rounded-2xl border border-sky-200/70 bg-white p-5">
+        <h3 class="text-xl font-bold text-[#0f325b]">100 Alasan Cinta (Versi Ringkas)</h3>
+        <ul class="mt-3 space-y-2 text-sm text-sky-900/90">
+          <li>1. Karena senyummu bikin hari buruk jadi baik.</li>
+          <li>2. Karena kamu selalu dengerin dengan tulus.</li>
+          <li>3. Karena kamu kuat, baik, dan penuh empati.</li>
+          <li>4. Karena kamu bikin aku pengen jadi versi terbaik diri sendiri.</li>
+          <li>5. Karena kamu adalah rumah untuk hatiku.</li>
+        </ul>
+      </article>
+      <article class="rounded-2xl border border-sky-200/70 bg-gradient-to-br from-sky-50 to-blue-50 p-5">
+        <h3 class="text-xl font-bold text-[#0f325b]">Doa Untuk Istrikuu tersayangg</h3>
+        <p class="mt-3 text-sm leading-7 text-sky-900/90">
+          Semoga istrikuu inii selalu sehat, dipermudah setiap urusan, dijaga langkahnya,
+          dan diberi kebahagiaan yang melimpah. Semoga semua impianmu satu per satu
+          datang di waktu terbaik.
+        </p>
+      </article>
+    </section>
+
+    <section id="letterSection" class="rounded-2xl border border-white/55 bg-white/80 p-4 backdrop-blur-xl sm:rounded-3xl sm:p-8">
+      <h2 class="text-xl font-bold text-[#0f325b] sm:text-2xl">Surat Kecil Untukmu</h2>
+      <article class="mt-4 rounded-2xl border border-sky-200/70 bg-white p-5 text-sm leading-7 text-sky-900/90">
+        Hai sayangg, terima kasih karena sudah jadi bagian penting dalam hidupku.
+        Kalau dunia lagi capek-capeknya, aku harap kamu ingat kalau kamu selalu punya
+        tempat aman untuk pulang. Di hari ulang tahunmu ini, aku cuma mau bilang:
+        kamu berharga, kamu dicintai, dan kamu pantas mendapatkan semua hal baik.
+      </article>
+      <div class="mt-5 flex flex-wrap gap-3">
+        <button id="surpriseBtn" type="button" class="w-full rounded-full bg-sky-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-600 sm:w-auto">Klik kejutan lucu</button>
+        <span id="surpriseText" class="inline-flex items-center rounded-full border border-sky-200 bg-sky-50 px-4 py-2 text-sm font-medium text-sky-800"></span>
+      </div>
+    </section>
+
+    <footer class="rounded-2xl border border-sky-200/70 bg-white/90 p-4 text-center text-xs text-sky-900/85 sm:rounded-3xl sm:p-6 sm:text-sm">
+      Dibuat dengan cinta, khusus untuk Sayangkuu Viraa. Selamat ulang tahun, semoga harimu seindah senyummu.
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+  <script>
+    const notes = [
+      "Kamu cantik, kuat, dan selalu bikin dunia lebih hangat.",
+      "Semoga tahun ini jadi tahun paling membahagiakan untukmu.",
+      "Terima kasih sudah jadi rumah paling nyaman buat hatiku.",
+      "Aku akan selalu dukung mimpi-mimpimu, sampai jadi nyata."
+    ];
+
+    const noteEl = document.getElementById("note");
+    const surpriseText = document.getElementById("surpriseText");
+    const loveBtn = document.getElementById("loveBtn");
+    const memoryBtn = document.getElementById("memoryBtn");
+    const surpriseBtn = document.getElementById("surpriseBtn");
+    const heroTitle = document.getElementById("heroTitle");
+    const heroSubtitle = document.getElementById("heroSubtitle");
+    const timelineCards = document.querySelectorAll(".timeline-card");
+    const actionRow = document.getElementById("actionRow");
+    const galleryItems = document.querySelectorAll(".gallery-item");
+
+    function randomBetween(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    function spawnHeart(x, y) {
+      const heart = document.createElement("span");
+      heart.className = "heart";
+      heart.textContent = ["💖", "💗", "💝", "💕"][Math.floor(Math.random() * 4)];
+      heart.style.left = x + "px";
+      heart.style.top = y + "px";
+      heart.style.fontSize = randomBetween(16, 30) + "px";
+      heart.style.opacity = "0";
+      document.body.appendChild(heart);
+
+      anime({
+        targets: heart,
+        opacity: [0, 1, 0],
+        translateY: [0, -220],
+        translateX: () => randomBetween(-40, 40),
+        rotate: () => randomBetween(-18, 18),
+        scale: [0.4, 1.15],
+        easing: "easeOutExpo",
+        duration: 2200,
+        complete: () => heart.remove()
+      });
+    }
+
+    loveBtn.addEventListener("click", (event) => {
+      noteEl.textContent = "Peluk virtual terkirim untuk Vira, dengan cinta yang banyak.";
+      anime({
+        targets: noteEl,
+        scale: [0.95, 1],
+        opacity: [0.4, 1],
+        easing: "easeOutBack",
+        duration: 500
+      });
+
+      const rect = event.target.getBoundingClientRect();
+      const startX = rect.left + rect.width / 2;
+      const startY = rect.top + window.scrollY;
+
+      anime({
+        targets: loveBtn,
+        scale: [1, 0.92, 1.05, 1],
+        rotate: [0, -3, 2, 0],
+        duration: 620,
+        easing: "easeInOutSine"
+      });
+
+      for (let i = 0; i < 20; i += 1) {
+        setTimeout(() => {
+          spawnHeart(startX + randomBetween(-70, 70), startY + randomBetween(-8, 16));
+        }, i * 65);
+      }
+    });
+
+    memoryBtn.addEventListener("click", () => {
+      const pick = notes[Math.floor(Math.random() * notes.length)];
+      noteEl.textContent = pick;
+      anime({
+        targets: noteEl,
+        translateY: [8, 0],
+        opacity: [0.25, 1],
+        duration: 420,
+        easing: "easeOutQuad"
+      });
+      anime({
+        targets: memoryBtn,
+        scale: [1, 1.06, 1],
+        duration: 450,
+        easing: "easeOutBack"
+      });
+    });
+
+    surpriseBtn.addEventListener("click", () => {
+      surpriseText.textContent = "Kejutan: kamu cantik banget hari ini dan setiap hari.";
+      anime({
+        targets: surpriseText,
+        opacity: [0.2, 1],
+        scale: [0.9, 1.05, 1],
+        duration: 600,
+        easing: "easeOutBack"
+      });
+      for (let i = 0; i < 16; i += 1) {
+        setTimeout(() => {
+          spawnHeart(window.innerWidth * randomBetween(0.2, 0.8), window.innerHeight * randomBetween(0.35, 0.8));
+        }, i * 70);
+      }
+    });
+
+    anime.timeline({
+      easing: "easeOutExpo",
+      duration: 900
+    })
+      .add({
+        targets: "#heroSection",
+        opacity: [0, 1],
+        translateY: [40, 0],
+        scale: [0.96, 1]
+      })
+      .add(
+        {
+          targets: "#badgeRow span",
+          opacity: [0, 1],
+          translateY: [14, 0],
+          delay: anime.stagger(90),
+          duration: 600
+        },
+        "-=550"
+      )
+      .add(
+        {
+          targets: heroTitle,
+          opacity: [0, 1],
+          translateX: [-24, 0],
+          duration: 700
+        },
+        "-=500"
+      )
+      .add(
+        {
+          targets: [heroSubtitle, "#miniStats article", actionRow, noteEl],
+          opacity: [0, 1],
+          translateY: [14, 0],
+          delay: anime.stagger(120),
+          duration: 650
+        },
+        "-=540"
+      );
+
+    anime({
+      targets: ["#timelineSection", "#gallerySection", "#reasonSection", "#letterSection", "footer"],
+      opacity: [0, 1],
+      translateY: [24, 0],
+      delay: anime.stagger(140, { start: 400 }),
+      duration: 780,
+      easing: "easeOutCubic"
+    });
+
+    anime({
+      targets: timelineCards,
+      translateX: [-16, 0],
+      opacity: [0, 1],
+      delay: anime.stagger(120, { start: 650 }),
+      duration: 650,
+      easing: "easeOutQuad"
+    });
+
+    anime({
+      targets: ".gallery-item",
+      opacity: [0, 1],
+      scale: [0.92, 1],
+      translateY: [20, 0],
+      delay: anime.stagger(90, { start: 350 }),
+      duration: 750,
+      easing: "easeOutCubic"
+    });
+
+    anime({
+      targets: [".floaty"],
+      translateY: ["-4px", "8px"],
+      rotate: () => randomBetween(-10, 10),
+      direction: "alternate",
+      easing: "easeInOutSine",
+      duration: () => randomBetween(2200, 3200),
+      delay: anime.stagger(180),
+      loop: true
+    });
+
+    anime({
+      targets: "#blobLeft",
+      scale: [1, 1.16],
+      opacity: [0.35, 0.6],
+      duration: 3200,
+      direction: "alternate",
+      easing: "easeInOutQuad",
+      loop: true
+    });
+
+    anime({
+      targets: "#blobRight",
+      scale: [1.05, 0.92],
+      opacity: [0.35, 0.58],
+      duration: 3600,
+      direction: "alternate",
+      easing: "easeInOutQuad",
+      loop: true
+    });
+
+    anime({
+      targets: "#miniStats article",
+      translateY: [0, -4],
+      direction: "alternate",
+      loop: true,
+      delay: anime.stagger(200),
+      duration: 1800,
+      easing: "easeInOutSine"
+    });
+
+    galleryItems.forEach((item) => {
+      item.addEventListener("mouseenter", () => {
+        anime({
+          targets: item.querySelector(".gallery-image"),
+          scale: 1.08,
+          duration: 420,
+          easing: "easeOutQuad"
+        });
+      });
+
+      item.addEventListener("mouseleave", () => {
+        anime({
+          targets: item.querySelector(".gallery-image"),
+          scale: 1,
+          duration: 420,
+          easing: "easeOutQuad"
+        });
+      });
+    });
+
+  </script>
+</body>
+</html>
